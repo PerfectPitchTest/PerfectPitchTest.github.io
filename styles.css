@@ -18,8 +18,7 @@ body{
     height: 80vh;            /* Full viewport height */
     margin-top: 1vh;                
     color: var(--brighter);
-    background-color: rgb(228, 87, 87);
-    /*background-color: rgb(48, 48, 48);*/
+    background-color: rgb(48, 48, 48);
     gap: 0;
 }
 

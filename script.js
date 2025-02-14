@@ -31,7 +31,7 @@ function selectNote(){
         }
         chosenNote = notes[randomIndex];
     }
-    noteFileName = currentNote;
+    noteFileName = chosenNote;
     notesAudio[randomIndex] = new Audio(noteFileName.replace('#', ' sharp') + ".mp3");
     notesAudio[randomIndex].preload = "auto";
     lastNote = chosenNote;
