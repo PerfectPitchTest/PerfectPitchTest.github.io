@@ -13,12 +13,7 @@ let randomIndex;
 const timerElement = document.querySelector(".timer");
 const timerOffColor = "#999898"
 const timerOnColor = "#e9e7e7"
-for(let i=0; i<notes.length; i++){
-    let currentNote = notes[i]
-    notesAudio[i] = new Audio(currentNote.replace('#', ' sharp') + ".mp3");
-    notesAudio[i].preload = "auto";
-}
-
+let noteFileName
 timerElement.style.color = timerOffColor;
 function selectNote(){
     randomIndex = Math.floor(Math.random() * notes.length);
@@ -36,6 +31,9 @@ function selectNote(){
         }
         chosenNote = notes[randomIndex];
     }
+    noteFileName = currentNote;
+    notesAudio[randomIndex] = new Audio(noteFileName.replace('#', ' sharp') + ".mp3");
+    notesAudio[randomIndex].preload = "auto";
     lastNote = chosenNote;
     console.log(chosenNote);
 }
