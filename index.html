@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pitch</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
+    <div class="variables">
+        <h2 class="timer">0:45</h2>
+    </div>
+    <script src="script.js" ></script>
+    <div class="quiz">
+        <h1 class="Question">Press the gray button to start</h1>
+        <button onClick="playNote(true)" class="playNoteButton">🎵 </button>
+        <div class="answer buttons">
+            <button onClick="isNote(true)" class="yes" id="answerButton">yes</button>
+            <button onClick="isNote(false)" class="no" id="answerButton">no</button>    
+        </div>
+    </div>
+    
+</body>
+</html>
