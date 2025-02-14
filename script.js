@@ -34,6 +34,7 @@ function selectNote(){
     noteFileName = chosenNote;
     notesAudio[randomIndex] = new Audio(noteFileName.replace('#', ' sharp') + ".mp3");
     notesAudio[randomIndex].preload = "auto";
+    console.log(chosenNote);
     lastNote = chosenNote;
 }
 
