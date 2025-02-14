@@ -47,9 +47,10 @@ function playNote(pressed) {
         timerElement.style.color = timerOnColor;
         selectNote();
     }
-    notesAudio[randomIndex].currentTime = 0;
 
     notesAudio[randomIndex].play();
+
+    notesAudio[randomIndex].currentTime = 0;
 }
 
 
