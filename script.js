@@ -21,18 +21,18 @@ for(let i=0; i<notes.length; i++){
 
 timerElement.style.color = timerOffColor;
 function selectNote(){
-    randomIndex = Math.floor(Math.random() * (difficalty + 1));
+    randomIndex = Math.floor(Math.random() * notes.length);
     while (notes[randomIndex] == lastWrittenNote || notes[randomIndex] == lastNote){
-        randomIndex = Math.floor(Math.random() * (difficalty + 1));
+        randomIndex = Math.floor(Math.random() * notes.length);
     }
     chosenNote = notes[randomIndex];
     writtenNote = chosenNote;
     lastWrittenNote = writtenNote;
     element[0].textContent = 'Is this the note ' + chosenNote + '?';
     if (Math.floor(Math.random() * 2) == 0){
-        randomIndex = Math.floor(Math.random() * (difficalty + 1));
+        randomIndex = Math.floor(Math.random() * notes.length);
         while (notes[randomIndex] == chosenNote || notes[randomIndex] == lastNote){
-            randomIndex = Math.floor(Math.random() * (difficalty + 1));
+            randomIndex = Math.floor(Math.random() * notes.length);
         }
         chosenNote = notes[randomIndex];
     }
