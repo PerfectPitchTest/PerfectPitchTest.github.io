@@ -15,6 +15,12 @@ const timerOffColor = "#999898"
 const timerOnColor = "#e9e7e7"
 
 timerElement.style.color = timerOffColor;
+for(let i=0; i<notes.length; i++){
+    let currentNote = notes[i]
+    notesAudio[i] = new Audio(currentNote.replace('#', ' sharp') + ".mp3");
+    notesAudio[i].preload = "auto";
+}
+
 function selectNote(){
     randomIndex = Math.floor(Math.random() * notes.length);
     while (notes[randomIndex] == lastWrittenNote || notes[randomIndex] == lastNote){
@@ -41,11 +47,11 @@ function playNote(pressed) {
         seconds = 45;
         isRunning = true;
         timerElement.style.color = timerOnColor;
-        for(let i=0; i<notes.length; i++){
-            let currentNote = notes[i]
-            notesAudio[i] = new Audio(currentNote.replace('#', ' sharp') + ".mp3");
-            notesAudio[i].preload = "auto";
-        }
+        // for(let i=0; i<notes.length; i++){
+        //     let currentNote = notes[i]
+        //     notesAudio[i] = new Audio(currentNote.replace('#', ' sharp') + ".mp3");
+        //     notesAudio[i].preload = "auto";
+        // }
         
         selectNote();
     }
@@ -113,4 +119,4 @@ function updateTimer() {
 }
 
 // Start the timer
-const timerInterval = setInterval(updateTimer, 200); // Update every second (1000ms)
+const timerInterval = setInterval(updateTimer, 200); // Update every 200ms
