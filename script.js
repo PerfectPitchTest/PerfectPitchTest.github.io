@@ -93,7 +93,7 @@ function updateTimer() {
             seconds = 0;
             isRunning = false;
             timerElement.style.color = timerOffColor;
-            element[0].textContent = "Time's up! Press the gray button to restart";
+            element[0].textContent = "Time's up! Press the note button to restart";
         }
     }
     // Convert seconds to minutes and seconds
