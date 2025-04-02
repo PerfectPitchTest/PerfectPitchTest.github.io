@@ -79,7 +79,7 @@ h1{
     align-items: flex-end;
     width: max(10vw, 140px);
     height: max(8vh, 80px);
-    font-size: max(2vw, 25px);
+    font-size: max(2.5vw, 25px);
     color: white;
     margin-top: 1vh;
     margin-left: max(5vw, 15px);
