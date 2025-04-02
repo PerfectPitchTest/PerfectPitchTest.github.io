@@ -77,7 +77,7 @@ h1{
 
 #answerButton {
     align-items: flex-end;
-    width: max(16vw, 140px);
+    width: max(15vw, 140px);
     height: max(8vh, 80px);
     font-size: max(2.5vw, 25px);
     color: white;
