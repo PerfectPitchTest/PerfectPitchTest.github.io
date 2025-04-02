@@ -67,7 +67,7 @@ h1{
     min-width: 180px;
     color: black;
     min-height: 180px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 .answeButtons{
