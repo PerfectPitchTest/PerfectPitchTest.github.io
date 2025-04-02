@@ -97,7 +97,6 @@ h1{
 
 .no{
     background-color: rgb(226, 78, 78);
-    margin-left: max(3vw, 15px);
 }
 
 .yes:active{
