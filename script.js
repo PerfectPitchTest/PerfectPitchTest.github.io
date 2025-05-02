@@ -47,11 +47,7 @@ function playNote(pressed) {
         seconds = 45;
         isRunning = true;
         timerElement.style.color = timerOnColor;
-        // for(let i=0; i<notes.length; i++){
-        //     let currentNote = notes[i]
-        //     notesAudio[i] = new Audio(currentNote.replace('#', ' sharp') + ".mp3");
-        //     notesAudio[i].preload = "auto";
-        // }
+
         
         selectNote();
     }
@@ -73,6 +69,7 @@ function isNote(bool) {
     if ((writtenNote == chosenNote) == bool) {
         element.style.color = correctColor;  // Correct answer
         seconds += 5;
+        score += 1;
     } else {
         element.style.color = wrongColor;  // Wrong answer
         seconds -= 6;
@@ -99,7 +96,8 @@ function updateTimer() {
             seconds = 0;
             isRunning = false;
             timerElement.style.color = timerOffColor;
-            element[0].textContent = "Time's up! Press the note button to restart";
+            element[0].textContent = `Time's up! Your score: ${score} \n Press the note button to restart`;
+            score = 0;
         }
     }
     // Convert seconds to minutes and seconds
