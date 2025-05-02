@@ -96,7 +96,7 @@ function updateTimer() {
             seconds = 0;
             isRunning = false;
             timerElement.style.color = timerOffColor;
-            element[0].textContent = `Time's up! Your score: ${score} \n Press the note button to restart`;
+            element[0].textContent = `Time's up! You got ${score} answers correct`;
             score = 0;
         }
     }
