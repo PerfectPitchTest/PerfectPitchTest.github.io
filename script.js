@@ -39,7 +39,6 @@ function selectNote(){
     }
     
     lastNote = chosenNote;
-    console.log(chosenNote);
 }
 
 function playNote(pressed) {
