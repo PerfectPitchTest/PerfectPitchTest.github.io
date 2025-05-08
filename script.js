@@ -78,6 +78,7 @@ function isNote(bool) {
         element.style.color = isRunning ? timerOnColor : timerOffColor;
     }, 200);
     
+    notesAudio[randomIndex].pause();     // Pause the playback
 
     selectNote();
     playNote(false);
