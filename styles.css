@@ -45,9 +45,9 @@ button{
     font-size: max(3vw, 30px);
     border-radius: 3vw;
     border: none;
-    padding: 5vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 1vw;
+    padding-top: 0.1vh;
+    padding-bottom: 0.1vh;
     min-width: 180px;
     color: black;
     min-height: 180px;
