@@ -22,21 +22,6 @@ body{
     gap: 0;
 }
 
-.quiz{
-    gap: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* Horizontally centers items */
-    justify-content: center;  /* Vertically centers items */
-    margin: 0;                
-}
-
-.variables{
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-}
-
 h1{
     margin: 0;
     /*margin-right: 1vw;
@@ -46,31 +31,15 @@ h1{
     text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 
 }
-.timer{
-    margin-bottom: 5vh;
-    margin-top: 5vh;
-    font-size: max(2.5vw, 30px);
-}
 
-.playNoteButton{
-    margin: 0;
-    background-color: var(--bright);
-    font-size: max(6vw, 60px);
-    border-radius: 3vw;
-    border: none;
-    padding: 5vw;
-    min-width: 180px;
-    color: black;
-    min-height: 180px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
-}
 
-.answeButtons{
+
+.buttons{
     display: flex;
     flex-direction: row;
 }
 
-#answerButton {
+button{
     align-items: flex-end;
     width: max(15vw, 140px);
     height: max(8vh, 80px);
@@ -83,35 +52,4 @@ h1{
     border: none;
     font-weight: bold;
 
-}
-
-.yes{
-    background-color: rgb(90, 179, 90);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
-
-}
-
-.no{
-    background-color: rgb(226, 78, 78);
-    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.4);
-
-}
-
-.yes:active{
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, ; /* Add transition for smooth effect */
-    background-color: rgb(95, 184, 95);
-}
-
-.no:active{
-    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, ; /* Add transition for smooth effect */
-    background-color: rgb(231, 83, 83);
-}
-
-.playNoteButton:active {
-    background-color: var(--brighter);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 10px 10px 15px rgba(0, 0, 0, 0.4) 0.1 ease;
-    transition: background-color 0.1s ease, ; /* Add transition for smooth effect */
 }
