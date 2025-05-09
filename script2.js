@@ -13,6 +13,8 @@ let randomIndex;
 const timerElement = document.querySelector(".timer");
 const timerOffColor = "#999898"
 const timerOnColor = "#e9e7e7"
+const answerColor = "#d3d3d3"
+
 
 timerElement.style.color = timerOffColor;
 for(let i=0; i<notes.length; i++){
@@ -23,21 +25,10 @@ for(let i=0; i<notes.length; i++){
 
 function selectNote(){
     randomIndex = Math.floor(Math.random() * notes.length);
-    while (notes[randomIndex] == lastWrittenNote || notes[randomIndex] == lastNote){
+    while (notes[randomIndex] == lastNote){
         randomIndex = Math.floor(Math.random() * notes.length);
     }
     chosenNote = notes[randomIndex];
-    writtenNote = chosenNote;
-    lastWrittenNote = writtenNote;
-
-    if (Math.floor(Math.random() * 2) == 0){
-        randomIndex = Math.floor(Math.random() * notes.length);
-        while (notes[randomIndex] == chosenNote || notes[randomIndex] == lastNote){
-            randomIndex = Math.floor(Math.random() * notes.length);
-        }
-        chosenNote = notes[randomIndex];
-    }
-    
     lastNote = chosenNote;
 }
 
@@ -62,16 +53,18 @@ function isNote(note) {
         return;
     const correctColor = "rgb(90, 179, 90)";
     const wrongColor = "rgb(226, 78, 78)";
-
+    const answerElement = document.getElementById(note);
     // Change the background color based on the answer
     if (note == chosenNote) {
         timerElement.style.color = correctColor;  // Correct answer
+        answerElement.style.backgroundColor = correctColor;  
         seconds += 5;
         score += 1;
         QuestionElement[0].textContent = 'correct! ';
 
     } else {
         timerElement.style.color = wrongColor;  // Wrong answer
+        answerElement.style.backgroundColor = wrongColor;  
         seconds -= 6;
         QuestionElement[0].textContent = chosenNote;
     }
@@ -79,13 +72,20 @@ function isNote(note) {
 
     setTimeout(() => {
         timerElement.style.color = isRunning ? timerOnColor : timerOffColor;
+        answerElement.style.backgroundColor = answerColor;  // Wrong answer
+
         if (isRunning) {
             QuestionElement[0].textContent = 'What is this note?';
+            selectNote();
         }
-        selectNote();
-        playNote(false);
-    }, 420);
+    }, 380);
     notesAudio[randomIndex].pause();     // Pause the playback
+
+    setTimeout(() => {
+        if (isRunning) {
+            playNote(false);
+        }
+    }, 420);
     
     
     
