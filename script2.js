@@ -79,10 +79,11 @@ function isNote(note) {
             selectNote();
         }
     }, 380);
-    notesAudio[randomIndex].pause();     // Pause the playback
 
     setTimeout(() => {
         if (isRunning) {
+            notesAudio[randomIndex].pause();     // Pause the playback
+
             playNote(false);
         }
     }, 420);
