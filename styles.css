@@ -16,7 +16,7 @@ body{
     align-items: center;      /* Horizontally centers items */
     justify-content: top;  /* Vertically centers items */
     height: 80vh;            /* Full viewport height */
-    margin-top: 8vh;                
+    margin-top: 7vh;                
     color: var(--brighter);
     background-color: rgb(48, 48, 48);
     gap: 0;
@@ -31,7 +31,7 @@ h1{
     text-align: center;
     text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     margin-bottom: 2vh;
-    margin-top: 14vh;
+    margin-top: 7vh;
 
 
 }
