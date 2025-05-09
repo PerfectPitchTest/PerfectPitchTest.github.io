@@ -8,7 +8,7 @@ let lastWrittenNote;
 let score = 0;
 let isRunning = false;
 const QuestionElement = document.getElementsByClassName("Question");
-let seconds = 45;
+let seconds = 90;
 let randomIndex;
 const timerElement = document.querySelector(".timer");
 const timerOffColor = "#999898"
@@ -34,7 +34,7 @@ function selectNote(){
 
 function playNote(pressed) {
     if (!isRunning && pressed) {
-        seconds = 45;
+        seconds = 90;
         isRunning = true;
         timerElement.style.color = timerOnColor;
         
