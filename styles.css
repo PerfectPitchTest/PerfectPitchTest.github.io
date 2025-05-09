@@ -42,7 +42,7 @@ h1{
 button{
     margin: 0;
     background-color: var(--bright);
-    font-size: max(6vw, 60px);
+    font-size: max(3vw, 30px);
     border-radius: 3vw;
     border: none;
     padding: 5vw;
