@@ -49,9 +49,7 @@ button{
     font-size: max(2.2vw, 22px);
     border-radius: 2vw;
     border: none;
-    padding: 1vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 2vw;
     min-width: 180px;
     color: white;
     min-height: 70px;
