@@ -76,14 +76,13 @@ function isNote(note) {
 
         if (isRunning) {
             QuestionElement[0].textContent = 'What is this note?';
-            selectNote();
         }
     }, 380);
 
     setTimeout(() => {
         if (isRunning) {
             notesAudio[randomIndex].pause();     // Pause the playback
-
+            selectNote();
             playNote(false);
         }
     }, 420);
