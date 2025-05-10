@@ -22,6 +22,22 @@ body{
     gap: 0;
 }
 
+.back{
+    background: none;
+    border: none;
+    position: fixed;
+    top: 1.5vh;
+    left: 0.2vh;
+    width: 15vw;
+    height: 5vh;
+    padding: 0;
+}
+.backImg{
+    width: 8vw;
+    height: 6vw;
+
+}
+
 .quiz{
     gap: 8vh;
     display: flex;
@@ -47,6 +63,7 @@ h1{
 
 }
 .timer{
+    margin: 0;
     margin-bottom: 5vh;
     margin-top: 5vh;
     font-size: max(2.5vw, 30px);

@@ -7,6 +7,22 @@
 
 }
 
+.back{
+    background: none;
+    border: none;
+    position: fixed;
+    top: 1.5vh;
+    left: 0.2vh;
+    width: 15vw;
+    height: 5vh;
+    padding: 0;
+}
+.backImg{
+    width: 8vw;
+    height: 6vw;
+
+}
+
 
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
