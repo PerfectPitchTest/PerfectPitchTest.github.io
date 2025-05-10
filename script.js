@@ -70,7 +70,7 @@ function isNote(bool) {
         score += 1;
     } else {
         timerElement.style.color = wrongColor;  // Wrong answer
-        seconds -= 6;
+        seconds -= 10;
     }
 
     setTimeout(() => {
