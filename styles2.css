@@ -11,8 +11,8 @@
     background: none;
     border: none;
     position: fixed;
-    top: 1.5vh;
-    left: 0.2vh;
+    top: 2.5vh;
+    left: 2.5vw;
     width: 15vw;
     height: 8vh;
     padding: 0;
@@ -20,7 +20,6 @@
 .backImg{
     width: 8vw;
     height: 8vw;
-
 }
 
 
@@ -32,7 +31,7 @@ body{
     align-items: center;      /* Horizontally centers items */
     justify-content: top;  /* Vertically centers items */
     height: 80vh;            /* Full viewport height */
-    margin-top: 1vh;                
+    margin-top: 2.5vh;                
     color: var(--brighter);
     background-color: rgb(48, 48, 48);
     gap: 0;
@@ -64,7 +63,7 @@ h1{
 }
 .timer{
     margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin-top: 1.5vh;
     font-size: max(2.5vw, 30px);
 }
 
