@@ -32,7 +32,7 @@ body{
     align-items: center;      /* Horizontally centers items */
     justify-content: top;  /* Vertically centers items */
     height: 80vh;            /* Full viewport height */
-    margin-top: 2vh;                
+    margin-top: 1vh;                
     color: var(--brighter);
     background-color: rgb(48, 48, 48);
     gap: 0;
