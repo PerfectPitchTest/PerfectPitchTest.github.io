@@ -7,7 +7,7 @@ let lastNote;
 let lastWrittenNote;
 let score = 0;
 let isRunning = false;
-const element = document.getElementsByClassName("Question");
+const questionElement = document.getElementsByClassName("Question");
 let seconds = 45;
 let randomIndex;
 const timerElement = document.querySelector(".timer");
@@ -29,7 +29,7 @@ function selectNote(){
     chosenNote = notes[randomIndex];
     writtenNote = chosenNote;
     lastWrittenNote = writtenNote;
-    element[0].textContent = 'Is this the note ' + chosenNote + '?';
+    questionElement[0].textContent = 'Is this the note ' + chosenNote + '?';
     if (Math.floor(Math.random() * 2) == 0){
         randomIndex = Math.floor(Math.random() * notes.length);
         while (notes[randomIndex] == chosenNote || notes[randomIndex] == lastNote){
@@ -60,28 +60,33 @@ function playNote(pressed) {
 function isNote(bool) {
     if(!isRunning)
         return;
-    const element = document.getElementsByClassName("timer")[0];
     const correctColor = "rgb(90, 179, 90)";
     const wrongColor = "rgb(226, 78, 78)";
 
     // Change the background color based on the answer
     if ((writtenNote == chosenNote) == bool) {
-        element.style.color = correctColor;  // Correct answer
+        timerElement.style.color = correctColor;  // Correct answer
         seconds += 5;
         score += 1;
     } else {
-        element.style.color = wrongColor;  // Wrong answer
+        timerElement.style.color = wrongColor;  // Wrong answer
         seconds -= 6;
     }
 
     setTimeout(() => {
-        element.style.color = isRunning ? timerOnColor : timerOffColor;
-    }, 200);
-    
-    notesAudio[randomIndex].pause();     // Pause the playback
+        timerElement.style.color = isRunning ? timerOnColor : timerOffColor;
 
-    selectNote();
-    playNote(false);
+        if (isRunning) {
+            notesAudio[randomIndex].pause();     // Pause the playback
+            selectNote();
+        }
+    }, 380);
+
+    setTimeout(() => {
+        if (isRunning) {
+            playNote(false);
+        }
+    }, 420);
     
 }
 
@@ -96,7 +101,7 @@ function updateTimer() {
             seconds = 0;
             isRunning = false;
             timerElement.style.color = timerOffColor;
-            element[0].innerHTML = `<b>Score: ${score}</b><br>Press the note to restart`;
+            questionElement[0].innerHTML = `<b>Score: ${score}</b><br>Press the note to restart`;
             score = 0;
         }
     }
